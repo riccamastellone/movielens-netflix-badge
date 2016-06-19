@@ -1,6 +1,6 @@
 {
-  "name": "MoviesLens Netflix",
-  "version": "0.0.1",
+  "name": "MoviesLens Netflix Badge",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "Easily spot movies that you can watch on Netflix",
   "homepage_url": "http://riccardomastellone.com",
