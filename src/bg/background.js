@@ -1,5 +1,7 @@
-chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-  chrome.tabs.sendMessage(tabs[0].id, {event: "page_change"}, function(response) {
-    console.log(response);
-  });
+// MovieLens uses Angular and pushHistory when changing page.
+// We use this listener to detect it and warn the inject.js script
+chrome.webNavigation.onHistoryStateUpdated.addListener(function(object){
+    chrome.tabs.sendMessage(object.tabId, {event: 'page_changed'}, function(response) {
+    	// We don't really care about the callback
+    });
 });
